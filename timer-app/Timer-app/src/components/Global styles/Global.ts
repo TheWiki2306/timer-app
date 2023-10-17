@@ -18,9 +18,12 @@ const GlobalStyles = createGlobalStyle`
 
 body{
     background: var(--color-bg);
+    /* background: black; */
+}
+
+.container{
     width: var(--container-width-lg);
     margin: 0 auto;
-    /* background: black; */
 }
 `
 export default GlobalStyles;
