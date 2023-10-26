@@ -9,7 +9,8 @@ const GlobalStyles = createGlobalStyle`
 }
 
 :root{
-    --color-bg: #EBECF0;
+    --color-bg: #cccc99;
+    --txt-color: brown;
     --hover-color: #77C3EC;
     --container-width-lg: 80%;
     --container-width-md: 60%;
@@ -19,6 +20,8 @@ const GlobalStyles = createGlobalStyle`
 body{
     background: var(--color-bg);
     /* background: black; */
+    margin-top: 0.5rem;
+    color: var(--txt-color);
 }
 
 .container{

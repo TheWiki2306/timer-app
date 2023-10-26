@@ -1,12 +1,10 @@
-import Nav from "./components/Nav/Nav"
 import GlobalStyles from "./components/Global styles/Global"
-import { Routes, Route } from "react-router-dom"
-import Alarm from "./Pages/Alarm/Alarm";
-import Timer from "./Pages/Timer/Timer";
-import StopWatch from "./Pages/stopwatch/StopWatch";
-import SectionOne from "./components/sectionOne/SectionOne";
+import { Routes, Route  } from "react-router-dom"
 import { createTheme, ThemeProvider } from '@mui/material';
 import Typography from "@mui/material/Typography";
+import { Container } from "./App.styles";
+import AlarmClock from "./Pages/Alarm clock/AlarmClock";
+import Home from "./Pages/Home/Home";
 
 const theme = createTheme({
   typography: {
@@ -19,18 +17,17 @@ const theme = createTheme({
 function App() {
 
   return (
-    <ThemeProvider theme={theme}>
-      <Typography>
-    <GlobalStyles/>
-    <Nav/>
-    <Routes>
-      <Route path='/alarm' element={<Alarm/>}/>
-      <Route path='/timer' element={<Timer/>}/>
-      <Route path='/stopwatch' element={<StopWatch/>}/>
-    </Routes>
-    <SectionOne/>
-    </Typography>
-    </ThemeProvider>
+    <Container>
+      <ThemeProvider theme={theme}>
+        <Typography>
+          <GlobalStyles/>
+          <Routes>
+            <Route path='/' element={<Home/>}/>
+            <Route path='/alarm' element={<AlarmClock/>}/>
+          </Routes>  
+        </Typography>
+      </ThemeProvider>
+    </Container>
   )
 }
 

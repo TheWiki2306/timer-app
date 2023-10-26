@@ -1,15 +1,14 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 0.5rem;
 
+    margin-top: 0.5rem;
+    text-align: center;
     .logo{
         display: inline-flex;
         align-items: center;
         gap: 0.5rem;
+        
     }
 
     .clock{
